@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -17,11 +18,12 @@ sequenceDiagram
     server-->>browser: 304 Not Modified, spa.js
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note over browser: The browser starts executing the JavaScript code that fetches the JSON from the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: 304 Not Modified, [ ... , { "content": "note", "date": "2024-10-20T19:22:59.303Z" }]
     deactivate server
 
-    Note right of browser: The browser executes the callback function that renders the notes
+    Note over browser: The browser executes the callback function that renders the notes
+```

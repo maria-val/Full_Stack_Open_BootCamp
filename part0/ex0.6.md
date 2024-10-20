@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -7,6 +8,7 @@ sequenceDiagram
     server-->>browser: 201 Created, [{"message":"note created"}]
     deactivate server
 
-    Note right of browser: {content: "spa note", date: "2024-10-20T19:42:10.320Z"}
+    Note over browser: {content: "spa note", date: "2024-10-20T19:42:10.320Z"}
+```
 
     
